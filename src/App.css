@@ -1,10 +1,11 @@
 .container1 {
     border: 1px solid black;
-    height: 300px;
+    height: auto;
     width: 300px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    flex-wrap: wrap;
 
 }
 .input{
@@ -12,7 +13,11 @@
   justify-content: center;
 }
 .cardTable{
-  display:flex;
   justify-content: center;
   flex-direction: column;
+}
+.heading{
+  /* display:flex; */
+  justify-content: center;
+  text-align: center;
 }
