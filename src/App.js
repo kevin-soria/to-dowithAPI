@@ -111,6 +111,13 @@ const removeTask = (bubu) => {
             <div className="cardTable">
                 {list}
             </div>
+        
+            <div className="heading">
+            
+                <h2> Click them When You're Finish!!!!</h2>
+            </div>
+
+        
         </div>
     );
 }
