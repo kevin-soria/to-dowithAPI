@@ -39,7 +39,7 @@ function App() {
             }
         }).then(dataBack => setTodo(data))
         .catch(err => {
-          alert('Check the console log you stupid')
+          alert('Check the console log')
           console.error(err);
         });
     }
@@ -83,7 +83,7 @@ function App() {
                 <button
                     type="button"
                     class="btn btn-success"
-                    onClick={(event) => addTask(input)}>Add task</button>
+                    onClick={() => addTask(input)}>Add task</button>
             </div>
             <div className="cardTable">
                 {list}
