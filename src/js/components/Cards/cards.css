@@ -6,4 +6,11 @@
     margin-top: 10px;
     border-radius: 16px;
     font: 400 10px/1.3 'Lobster Two', Helvetica, sans-serif;
+    cursor: pointer;
+
+}
+
+.newTask:hover {
+    opacity: 0.6;
+    cursor: pointer;
 }
