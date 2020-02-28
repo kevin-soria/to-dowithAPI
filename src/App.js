@@ -44,6 +44,29 @@ function App() {
         });
     }
 
+// <---------------------------------------------------------------------------------------->
+
+const removeTask = (bubu) => {
+    
+    let itemToUpdate = todo.filter((item,index)=> index != bubu)
+    console.log("item", itemToUpdate)
+    fetch('https://assets.breatheco.de/apis/fake/todos/user/kevinsoria', {
+        method: 'PUT',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body:JSON.stringify()
+    }).then(res => {
+        if (res.status == 200) {
+            return res.json();
+            }
+        })
+        .then(dataBack => setTodo(itemToUpdate))
+        .catch(err => {
+            alert('Check the delete console log ')        
+             console.error(err);       });   }
+
+// <----------------------------------------------------------------------------------------------->
     const handleChange = (event) => {
         return setInput(event.target.value)
     }
@@ -59,8 +82,8 @@ function App() {
             setInput("")
         }
     }
-    console.log("todos->", todo);
-    const list = todo.map((item, index) => <Cards key={index} name={item.label}/>)
+    // console.log("todos->", todo);
+    const list = todo.map((item, index) => <Cards onDelete={()=> removeTask(index)} key={index} name={item.label} />)
 
     return (
         <div className="container1">
