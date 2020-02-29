@@ -18,11 +18,12 @@ function App() {
 
     const addTask = (val) => {
       console.log("htis is the val---->", val)
-        const data = [
+      setInput("")
+      const data = [
             ...todo, {
                 label: (val),
                 done: false
-            }
+            },
         ]
 
         fetch('https://assets.breatheco.de/apis/fake/todos/user/kevinsoria', {
@@ -42,6 +43,7 @@ function App() {
           alert('Check the console log')
           console.error(err);
         });
+
     }
 
 // <---------------------------------------------------------------------------------------->
@@ -70,8 +72,7 @@ const removeTask = (bubu) => {
     const handleChange = (event) => {
         return setInput(event.target.value)
     }
-    //   const handleClick2 = (event) => {     // getfrom API     return
-    // setInput(event.target.value) }
+
 
     const handleKeyDown = (event) => {
         if (event.keyCode === 13) {
@@ -101,7 +102,8 @@ const removeTask = (bubu) => {
                     id="input"
                     onChange={(event) => handleChange(event)}
                     placeholder="Add a Task :)"
-                    onKeyDown={(event) => handleKeyDown(event)}/>
+                    // onKeyDown={(event) => handleKeyDown(event)}
+                    />
 
                 <button
                     type="button"
@@ -113,8 +115,7 @@ const removeTask = (bubu) => {
             </div>
         
             <div className="heading">
-            
-                <h2> Click them When You're Finish!!!!</h2>
+                <h2> Click 'Em When Finished!</h2>
             </div>
 
         
